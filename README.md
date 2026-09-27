@@ -14,6 +14,7 @@ The system is designed to support multi-sensor calibration workflows, coordinate
 ## 📑 Table of Contents
 * [📸 System Overview &amp; Architecture](#-system-overview--architecture)
 * [🔑 Key Features](#-key-features)
+* [⚡ Quick Start](#-quick-start) 
 * [🚀 Getting Started &amp; Execution](#-getting-started--execution)
 * [⚙️ Configuration &amp; Operational Modes](#%EF%B8%8F-configuration--operational-modes)
 * [📊 Calibration Sequence &amp; Analysis](#-calibration-sequence--analysis)
@@ -145,6 +146,106 @@ The acquisition path and test-state synchronization are designed so that process
 * **Calibration Sessions:** Multiple `TestRuns` can be grouped under a single `CalibrationSessionID`, allowing an entire multi-cycle calibration to be analyzed as one session.
 * **Relational Traceability:** Calibration points retain links to the `TestRun` and UUT channel records used to acquire them.
 * **Analysis Dialog:** Operators can select Model Number, Serial Number, and calibration session date/time to retrieve and analyze historical calibration results.
+
+[⬆ Back to Top](#top)
+
+---
+
+## ⚡ Quick Start
+
+### 1. Launch the Application
+
+Open the main application VI and run it. On startup, the Database Loop initializes the SQLite database and creates the required tables if they do not already exist.
+
+> **Important:** Simulation Mode defaults to **False**. If physical NI-DAQmx hardware is not connected and you are performing a software-only first run, enable Simulation Mode before starting the test.
+
+### 2. Configure a Sensor Model
+
+Version 1.0 stores model-specific test parameters in the SQLite `TestConfigurations` table. A model must have a configuration before it can be selected for sensor registration and testing.
+
+Each configuration defines:
+
+* `ModelNumber`
+* `TargetSampleRateHz`
+* `SteadyStateDurationSec`
+* `AllowedTolerancePercentFS`
+* `MaxSettlingTimeoutSec`
+
+For Version 1.0, new model configurations are added or modified directly in the SQLite `TestConfigurations` table using SQL.
+
+### 3. Register the Sensor
+
+From the Main VI, select **Manage Serial Numbers**.
+
+1. Select a configured model number.
+2. Enter the sensor serial number.
+3. Enter the sensor's minimum and maximum range.
+4. Enter the engineering units.
+5. Enter the sensor output signal.
+6. Save the sensor record.
+
+The sensor is stored in the SQLite `Sensors` table. Measurement role and physical acquisition-channel assignment are performed later in the Settings interface.
+
+### 4. Configure the Test
+
+Open **Settings** from the Main VI.
+
+Under **Instrument Configuration**, verify the database-derived configuration values for the selected sensor model.
+
+Under **Measurements (AI)**:
+
+1. Select the registered sensor model.
+2. Select the sensor serial number.
+3. Assign the measurement role (`Reference` or `UUT`).
+4. Assign the NI-DAQmx physical channel.
+
+Configure any required **Stimulus Outputs (AO)** for the test.
+
+### 5. Select the Operating Mode
+
+The application supports two acquisition modes:
+
+* **Simulation Mode** — generates simulated multi-channel waveforms for development and verification without physical NI hardware.
+* **Hardware Mode** — uses NI-DAQmx hardware for physical sensor acquisition and stimulus output.
+
+For an initial software-only checkout, use **Simulation Mode** and the predefined simulated sensor responses.
+
+### 6. Run the Calibration
+
+Return to the Main VI and verify that the configured sensors and test status are correct.
+
+Select **Start** to begin the calibration sequence.
+
+During the test, the system:
+
+1. Creates the calibration session and test-run records.
+2. Applies the configured stimulus and setpoints.
+3. Acquires or simulates multi-channel sensor data.
+4. Evaluates settling and steady-state requirements.
+5. Processes UUT measurements.
+6. Determines calibration-point PASS/FAIL results.
+7. Stores test-run, channel, and calibration-point records in SQLite.
+8. Continuously logs raw acquisition data to TDMS.
+
+### 7. Review Calibration Results
+
+After the calibration is complete, open the **Analysis Dialog**.
+
+Select:
+
+* Model Number
+* Serial Number
+* Calibration session date/time
+
+The selected calibration session includes its associated test cycles. The analysis results include:
+
+* **Accuracy %FS**
+* **BFSL Linearity %FS**
+* **Hysteresis %FS**
+* **Repeatability %FS**
+* **Overall PASS/FAIL status**
+
+A detailed report can be generated for the selected calibration session and sensor.
 
 [⬆ Back to Top](#top)
 
