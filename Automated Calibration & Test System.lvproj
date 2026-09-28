@@ -74,6 +74,7 @@
 				<Item Name="Test Sequence Settings.ctl" Type="VI" URL="../controls/UI/Test Sequence Settings.ctl"/>
 				<Item Name="Test Sequence Enum.ctl" Type="VI" URL="../controls/UI/Test Sequence Enum.ctl"/>
 				<Item Name="UI Data.ctl" Type="VI" URL="../controls/UI/UI Data.ctl"/>
+				<Item Name="UI List Type.ctl" Type="VI" URL="../controls/UI/UI List Type.ctl"/>
 				<Item Name="UI State.ctl" Type="VI" URL="../controls/UI/UI State.ctl"/>
 				<Item Name="Units Enum.ctl" Type="VI" URL="../controls/UI/Units Enum.ctl"/>
 				<Item Name="Measurement Config.ctl" Type="VI" URL="../controls/UI/Measurement Config.ctl"/>
@@ -111,7 +112,6 @@
 			<Item Name="Controller" Type="Folder">
 				<Item Name="Stimulus Role.ctl" Type="VI" URL="../controls/Controller/Stimulus Role.ctl"/>
 			</Item>
-			<Item Name="UI List Type.ctl" Type="VI" URL="../controls/UI/UI List Type.ctl"/>
 		</Item>
 		<Item Name="Admin.lvlib" Type="Library" URL="../Admin/Admin.lvlib"/>
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>

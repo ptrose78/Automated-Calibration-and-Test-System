@@ -14,7 +14,6 @@
 	<Item Name="Add Stimulus Output Rows.vi" Type="VI" URL="../Add Stimulus Output Rows.vi"/>
 	<Item Name="Assign Error.vi" Type="VI" URL="../Assign Error.vi"/>
 	<Item Name="DB Request UI List.vi" Type="VI" URL="../../Database/DB Request UI List.vi"/>
-	<Item Name="Fetch All Operators.vi" Type="VI" URL="../Fetch All Operators.vi"/>
 	<Item Name="Fetch Config.vi" Type="VI" URL="../Fetch Config.vi"/>
 	<Item Name="Fetch Sensor Data.vi" Type="VI" URL="../../Database/Fetch Sensor Data.vi"/>
 	<Item Name="Fetch SensorID.vi" Type="VI" URL="../../support/UI Utilities/Fetch SensorID.vi"/>
