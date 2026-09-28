@@ -175,6 +175,8 @@ Each configuration defines:
 
 For Version 1.0, new model configurations are added or modified directly in the SQLite `TestConfigurations` table using SQL.
 
+▶️ **[Watch the Quick Start video: Configure a Sensor Model](https://www.youtube.com/watch?v=iytZI9MwTIs)**
+
 ### 3. Register the Sensor
 
 From the Main VI, select **Manage Serial Numbers**.
