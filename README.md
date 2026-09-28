@@ -159,6 +159,8 @@ Open the main application VI and run it. On startup, the Database Loop initializ
 
 > **Important:** Simulation Mode defaults to **False**. If physical NI-DAQmx hardware is not connected and you are performing a software-only first run, enable Simulation Mode before starting the test.
 
+▶️ **[Watch the Quick Start video: Launch the Application](https://youtu.be/X1RNhC5maAk)**
+
 ### 2. Configure a Sensor Model
 
 Version 1.0 stores model-specific test parameters in the SQLite `TestConfigurations` table. A model must have a configuration before it can be selected for sensor registration and testing.
