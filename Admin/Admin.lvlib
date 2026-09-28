@@ -4,4 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">637566976</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Login.vi" Type="VI" URL="../../support/UI Utilities/Login.vi"/>
+	<Item Name="Set Admin Visible .vi" Type="VI" URL="../../support/UI Utilities/Set Admin Visible .vi"/>
 </Library>

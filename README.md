@@ -177,7 +177,23 @@ For Version 1.0, new model configurations are added or modified directly in the 
 
 ▶️ **[Watch the Quick Start video: Configure a Sensor Model](https://www.youtube.com/watch?v=iytZI9MwTIs)**
 
-### 3. Register the Sensor
+### 3. Configure Administrator Password
+
+Before accessing password-protected functions, configure the administrator password in `SystemConfig.ini`.
+
+1. Choose an administrator password.
+2. Generate the **SHA-256 hash** of the password.
+3. Open `SystemConfig.ini` in the project directory.
+4. Under **System Settings**, replace `INSERT_SHA256_HASH_HERE` with the generated SHA-256 hash.
+5. Save the configuration file.
+
+When a password-protected function is accessed, enter the **original administrator password**. The application calculates the SHA-256 hash of the entered password and compares it with the `AdminHash` value stored in `SystemConfig.ini`.
+
+> **Important:** Do not store or commit your actual administrator password or password hash in the project repository. `SystemConfig.ini` is excluded from source control.
+
+▶️ **[Watch the Quick Start video: Configure Administrator Password](https://www.youtube.com/watch?v=yf01NTaYJQA)**
+
+### 4. Register the Sensor
 
 From the Main VI, select **Manage Serial Numbers**.
 
@@ -190,7 +206,7 @@ From the Main VI, select **Manage Serial Numbers**.
 
 The sensor is stored in the SQLite `Sensors` table. Measurement role and physical acquisition-channel assignment are performed later in the Settings interface.
 
-### 4. Configure the Test
+### 5. Configure the Test
 
 Open **Settings** from the Main VI.
 
@@ -205,7 +221,7 @@ Under **Measurements (AI)**:
 
 Configure any required **Stimulus Outputs (AO)** for the test.
 
-### 5. Select the Operating Mode
+### 6. Select the Operating Mode
 
 The application supports two acquisition modes:
 
@@ -214,7 +230,7 @@ The application supports two acquisition modes:
 
 For an initial software-only checkout, use **Simulation Mode** and the predefined simulated sensor responses.
 
-### 6. Run the Calibration
+### 7. Run the Calibration
 
 Return to the Main VI and verify that the configured sensors and test status are correct.
 
@@ -231,15 +247,15 @@ During the test, the system:
 7. Stores test-run, channel, and calibration-point records in SQLite.
 8. Continuously logs raw acquisition data to TDMS.
 
-### 7. Review Calibration Results
+### 8. Review Calibration Results
 
 After the calibration is complete, open the **Analysis Dialog**.
 
 Select:
 
-* Model Number
-* Serial Number
-* Calibration session date/time
+* **Model Number**
+* **Serial Number**
+* **Calibration session date/time**
 
 The selected calibration session includes its associated test cycles. The analysis results include:
 
