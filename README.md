@@ -206,6 +206,8 @@ From the Main VI, select **Manage Serial Numbers**.
 
 The sensor is stored in the SQLite `Sensors` table. Measurement role and physical acquisition-channel assignment are performed later in the Settings interface.
 
+▶️ **[Watch the Quick Start video: Register the Sensor](https://www.youtube.com/watch?v=BjLVVS2KBrU)**
+
 ### 5. Configure the Test
 
 Open **Settings** from the Main VI.
