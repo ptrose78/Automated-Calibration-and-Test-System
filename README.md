@@ -264,20 +264,16 @@ The test configuration is now ready for the next step.
 
 ▶️ **[Watch the Quick Start video: Configure the Test](https://www.youtube.com/watch?v=tpZwP3x1pj8)**
 
-### 8. Select the Operating Mode
+### 8. Run the Calibration
 
-The application supports two acquisition modes:
+From the Main VI, select the appropriate operating mode:
 
-* **Simulation Mode** — generates simulated multi-channel waveforms for development and verification without physical NI hardware.
-* **Hardware Mode** — uses NI-DAQmx hardware for physical sensor acquisition and stimulus output.
+- **Simulation Mode** — generates simulated multi-channel waveforms for development and verification without physical NI hardware.
+- **Hardware Mode** — uses NI-DAQmx hardware for physical sensor acquisition and stimulus output.
 
-For an initial software-only checkout, use **Simulation Mode** and the predefined simulated sensor responses.
+For an initial software-only checkout, enable **Simulation Mode** to 'ON' on the Main VI front panel and use the predefined simulated sensor responses.
 
-### 9. Run the Calibration
-
-Return to the Main VI and verify that the configured sensors and test status are correct.
-
-Select **Start** to begin the calibration sequence.
+Verify that the configured measurement sensors are correct, then select **Start** to begin the calibration sequence.
 
 During the test, the system:
 
@@ -290,7 +286,9 @@ During the test, the system:
 7. Stores test-run, channel, and calibration-point records in SQLite.
 8. Continuously logs raw acquisition data to TDMS.
 
-### 10. Review Calibration Results
+▶️ **[Watch the Quick Start video: Run the Calibration](https://www.youtube.com/watch?v=7ZdO1xC_DXU)**
+
+### 9. Review Calibration Results
 
 After the calibration is complete, open the **Analysis Dialog**.
 
