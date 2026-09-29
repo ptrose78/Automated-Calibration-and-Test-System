@@ -193,7 +193,30 @@ When a password-protected function is accessed, enter the **original administrat
 
 ▶️ **[Watch the Quick Start video: Configure Administrator Password](https://www.youtube.com/watch?v=yf01NTaYJQA)**
 
-### 4. Register the Sensor
+### 4. Configure a Controller
+
+The system stores controller-specific configuration information in the SQLite `Controllers` table. A controller must be configured before it can be selected and used in the Settings interface.
+
+For Version 1.0, new controller configurations are added directly to the SQLite `Controllers` table using SQL.
+
+Each controller configuration defines:
+
+- `Manufacturer`
+- `ModelNumber`
+- `SerialNumber`
+- `MinValue`
+- `MaxValue`
+- `Units`
+- `InputSignalType`
+- `InputSignalMin`
+- `InputSignalMax`
+
+These parameters identify the controller and define its operating range and input signal configuration.
+
+
+▶️ **[Watch the Quick Start video: Configure a Controller](https://www.youtube.com/watch?v=sDv8Sn0-mkE)**
+
+### 5. Register the Sensor
 
 From the Main VI, select **Manage Serial Numbers**.
 
@@ -208,7 +231,7 @@ The sensor is stored in the SQLite `Sensors` table. Measurement role and physica
 
 ▶️ **[Watch the Quick Start video: Register the Sensor](https://www.youtube.com/watch?v=BjLVVS2KBrU)**
 
-### 5. Register the Operator
+### 6. Register the Operator
 
 From the Main VI, select **Manage Operators**.
 
@@ -219,7 +242,7 @@ The operator is stored in the SQLite `Operators` table and can be used for opera
 
 ▶️ **[Watch the Quick Start video: Register the Operator](https://www.youtube.com/watch?v=EPBDVxanazg)** 
 
-### 6. Configure the Test
+### 7. Configure the Test
 
 Open **Settings** from the Main VI.
 
@@ -234,7 +257,7 @@ Under **Measurements (AI)**:
 
 Configure any required **Stimulus Outputs (AO)** for the test.
 
-### 7. Select the Operating Mode
+### 8. Select the Operating Mode
 
 The application supports two acquisition modes:
 
@@ -243,7 +266,7 @@ The application supports two acquisition modes:
 
 For an initial software-only checkout, use **Simulation Mode** and the predefined simulated sensor responses.
 
-### 8. Run the Calibration
+### 9. Run the Calibration
 
 Return to the Main VI and verify that the configured sensors and test status are correct.
 
@@ -260,7 +283,7 @@ During the test, the system:
 7. Stores test-run, channel, and calibration-point records in SQLite.
 8. Continuously logs raw acquisition data to TDMS.
 
-### 9. Review Calibration Results
+### 10. Review Calibration Results
 
 After the calibration is complete, open the **Analysis Dialog**.
 
