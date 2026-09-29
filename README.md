@@ -208,7 +208,18 @@ The sensor is stored in the SQLite `Sensors` table. Measurement role and physica
 
 ▶️ **[Watch the Quick Start video: Register the Sensor](https://www.youtube.com/watch?v=BjLVVS2KBrU)**
 
-### 5. Configure the Test
+### 5. Register the Operator
+
+From the Main VI, select **Manage Operators**.
+
+1. Enter the operator's first and last name.
+2. Save the operator record.
+
+The operator is stored in the SQLite `Operators` table and can be used for operator identification within the application.
+
+▶️ **[Watch the Quick Start video: Register the Operator](https://www.youtube.com/watch?v=EPBDVxanazg)** 
+
+### 6. Configure the Test
 
 Open **Settings** from the Main VI.
 
@@ -223,7 +234,7 @@ Under **Measurements (AI)**:
 
 Configure any required **Stimulus Outputs (AO)** for the test.
 
-### 6. Select the Operating Mode
+### 7. Select the Operating Mode
 
 The application supports two acquisition modes:
 
@@ -232,7 +243,7 @@ The application supports two acquisition modes:
 
 For an initial software-only checkout, use **Simulation Mode** and the predefined simulated sensor responses.
 
-### 7. Run the Calibration
+### 8. Run the Calibration
 
 Return to the Main VI and verify that the configured sensors and test status are correct.
 
@@ -249,7 +260,7 @@ During the test, the system:
 7. Stores test-run, channel, and calibration-point records in SQLite.
 8. Continuously logs raw acquisition data to TDMS.
 
-### 8. Review Calibration Results
+### 9. Review Calibration Results
 
 After the calibration is complete, open the **Analysis Dialog**.
 
