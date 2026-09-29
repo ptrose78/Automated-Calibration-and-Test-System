@@ -296,9 +296,9 @@ Select:
 
 * **Model Number**
 * **Serial Number**
-* **Calibration session date/time**
+* **Date/Time**
 
-The selected calibration session includes its associated test cycles. The analysis results include:
+The selected calibration session includes its associated test cycles. Select Generate Results. The analysis results include:
 
 * **Accuracy %FS**
 * **BFSL Linearity %FS**
@@ -306,7 +306,9 @@ The selected calibration session includes its associated test cycles. The analys
 * **Repeatability %FS**
 * **Overall PASS/FAIL status**
 
-A detailed report can be generated for the selected calibration session and sensor.
+A detailed report is automatically generated for the selected calibration session and sensor.
+
+▶️ **[Watch the Quick Start video: Review Calibration Results](https://www.youtube.com/watch?v=Ff5iCqyaV9M)**
 
 [⬆ Back to Top](#top)
 
