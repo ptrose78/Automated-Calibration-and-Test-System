@@ -244,18 +244,25 @@ The operator is stored in the SQLite `Operators` table and can be used for opera
 
 ### 7. Configure the Test
 
-Open **Settings** from the Main VI.
+Open **Settings** from the Main VI to configure the instruments used during the calibration test.
 
-Under **Instrument Configuration**, verify the database-derived configuration values for the selected sensor model.
+Under **Instrument Configuration**, there is a read-only summary of the measurement sensors, currently showing the default values.
 
-Under **Measurements (AI)**:
+Under **Measurements (AI)**, configure the sensors used to measure the test condition:
 
-1. Select the registered sensor model.
-2. Select the sensor serial number.
-3. Assign the measurement role (`Reference` or `UUT`).
-4. Assign the NI-DAQmx physical channel.
+1. Select the registered sensor used as the **Reference** sensor and assign its NI-DAQmx physical acquisition channel.
+2. Select the first registered **UUT (Unit Under Test)** sensor and assign its NI-DAQmx physical acquisition channel.
+3. Select the second registered **UUT** sensor and assign its NI-DAQmx physical acquisition channel.
 
-Configure any required **Stimulus Outputs (AO)** for the test.
+The **Reference sensor** provides the reference measurement used to evaluate the UUT sensors. The two **UUT sensors** are the devices being evaluated during the calibration.
+
+Under **Stimulus Outputs (AO)**, select the configured controller and assign its NI-DAQmx physical output channel. The controller is used to apply and control the test stimulus, such as pressure.
+
+Verify that the correct sensors, measurement roles, acquisition channels, controller, and output channel are assigned before proceeding.
+
+The test configuration is now ready for the next step.
+
+▶️ **[Watch the Quick Start video: Configure the Test](https://www.youtube.com/watch?v=tpZwP3x1pj8)**
 
 ### 8. Select the Operating Mode
 

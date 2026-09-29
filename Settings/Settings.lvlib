@@ -24,6 +24,7 @@
 	<Item Name="Overwrite Measurement Role.vi" Type="VI" URL="../Overwrite Measurement Role.vi"/>
 	<Item Name="Overwrite Physical Channel.vi" Type="VI" URL="../Overwrite Physical Channel.vi"/>
 	<Item Name="Overwrite SensorID.vi" Type="VI" URL="../Overwrite SensorID.vi"/>
+	<Item Name="Remove Instrument Specifications Zeroes.vi" Type="VI" URL="../../Analysis/Remove Instrument Specifications Zeroes.vi"/>
 	<Item Name="Save Settings to XML.vi" Type="VI" URL="../Save Settings to XML.vi"/>
 	<Item Name="Update Instrument Specifications.vi" Type="VI" URL="../Update Instrument Specifications.vi"/>
 	<Item Name="Active Channels Config.ctl" Type="VI" URL="../../controls/Messaging Payloads/Active Channels Config.ctl"/>
