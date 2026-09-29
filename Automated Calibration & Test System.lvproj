@@ -120,7 +120,6 @@
 		<Item Name="Processing_Engine.lvlib" Type="Library" URL="../Processing/Processing_Engine.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="SystemConfig.ini" Type="Document" URL="../SystemConfig.ini"/>
-		<Item Name="SystemConfig.template.ini" Type="Document" URL="../SystemConfig.template.ini"/>
 		<Item Name="UUT Display Data.ctl" Type="VI" URL="../controls/UI/UUT Display Data.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
