@@ -48,3 +48,6 @@ SystemConfig.ini
 # Ignore video files
 *.mp4
 *.mp3
+
+# Ignore draft md files
+*_draft.md
