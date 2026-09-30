@@ -470,6 +470,4 @@ The Analysis Dialog uses stored calibration results to calculate performance met
 
 This repository does not currently specify an open-source license. No permission is granted by the repository to use, modify, or redistribute the software beyond any rights provided by applicable law.
 
-If this project is intended to be released as open-source software, add an appropriate license file (for example, MIT, Apache-2.0, or GPL-3.0) and update this section accordingly.
-
 [⬆ Back to Top](#top)
