@@ -280,7 +280,7 @@ The system uses dedicated LabVIEW execution loops for test sequencing, data acqu
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                            UI Message Loop                                   │
 │                                                                              │
-│           Handles operator commands and application windows                 │
+│           Handles operator commands and application windows                  │
 └───────────────────────────────────┬──────────────────────────────────────────┘
                                     │
                                     │ Test commands & test settings
@@ -321,8 +321,8 @@ The system uses dedicated LabVIEW execution loops for test sequencing, data acqu
 ┌──────────────────────────────┐ ┌────────────────────────────────┐
 │        Database Loop         │ │      TDMS Data Stream          │
 │                              │ │                                │
-│ Persists configuration and  │ │ Stores continuous raw waveform │
-│ calibration data in SQLite  │ │ data independently from        │
+│ Persists configuration and   │ │ Stores continuous raw waveform │
+│ calibration data in SQLite   │ │ data independently from        │
 │                              │ │ processed calibration results  │
 └──────────────┬───────────────┘ └────────────────────────────────┘
                │
@@ -331,7 +331,7 @@ The system uses dedicated LabVIEW execution loops for test sequencing, data acqu
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                         Calibration Analysis                                 │
 │                                                                              │
-│              Calculates calibration performance metrics                     │
+│              Calculates calibration performance metrics                      │
 └───────────────────────────────────┬──────────────────────────────────────────┘
                                     │
                                     │ Analysis results
